@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*Styles for modal box*/
+
+.backdrop {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  display: none;
+}
+
+.well-done-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2rem 3rem;
+  border-radius: 5%;
+  background-color: rgb(36, 69, 161);
+  z-index: 3;
+  display: none;
+}
+
+.window-inner {
+  line-height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.window-text {
+  padding: 1rem 0;
+  color: white;
+}
+
+.window-inner>.fa-times-circle {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  color: white;
+}
+
+.award {
+  color: white;
+}
+
+
+.open {
+  display: block;
+}
+
+/*Styles for To do list*/
+
+section {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("img/mountains.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 2rem 0;
+  margin: 3rem auto;
+  background-color: rgba(236, 216, 216, 0.7);
+  max-width: 1400px;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.6) 20px 10px 40px;
+  border-radius: 3%;
+}
+
+h1 {
+  font-size: 1.6rem;
+}
+
+form {
+  padding: 1rem 0;
+  display: flex;
+}
+
+
+.add,
+.add-button {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.5rem;
+}
+
+.add {
+  border: none;
+}
+
+
+.add-button,
+.delete-button {
+  text-transform: uppercase;
+  background-color: rgb(31, 34, 226);
+  color: white;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.add-button:hover,
+.delete-button:hover {
+  cursor: pointer;
+  background-color: white;
+  color: rgb(31, 34, 226);
+}
+
+ul {
+  list-style: none;
+  padding-bottom: 2rem;
+}
+
+li {
+  width: 100%;
+  padding: 0.2rem 0.1rem;
+  text-align: left;
+  margin-bottom: 0.5rem;
+  position: relative;
+  font-weight: 300;
+  font-size: 1rem;
+  border-bottom: 0.2rem solid black;
+}
+
+.delete-button {
+  display: none;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  line-height: 0.9rem;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.delete-icon {
+  position: absolute;
+  right: 0;
+  top: 5%;
+  width: 15%;
+  padding: 0.1rem 0.1rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.fa-check {
+  color: rgb(10, 68, 10);
+  transition: 0.1s all ease;
+}
+
+.fa-check:hover {
+  color: white;
+  background-color: rgb(10, 68, 10);
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .well-done-window {
+    padding: 3rem 4rem;
+  }
+
+  .window-text {
+    padding: 1.2rem 0;
+  }
+
+  .container {
+    width: 50%;
+    margin: 4rem auto;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem 0;
+  }
+
+  .add {
+    margin-bottom: 0rem;
+    margin-right: 0rem;
+  }
+
+  .add-button {
+    margin: 0;
+  }
+
+  .add,
+  .add-button {
+    line-height: 1rem;
+    font-size: 1.2rem;
+  }
+
+  .add-button {
+    padding: 0.4rem 0.5rem;
+  }
+
+  li {
+    font-size: 1.1rem;
+  }
+
+  .delete-button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    width: 40%;
+    background-position: center;
+    min-height: 70vh;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  li {
+    font-size: 1.3rem;
+  }
+}
